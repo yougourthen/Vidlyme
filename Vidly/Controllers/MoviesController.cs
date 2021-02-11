@@ -9,7 +9,7 @@ using Vidly.ViewModel;
 
 namespace Vidly.Controllers
 {
-    
+    [Authorize]
     public class MoviesController : Controller
     {
         private ApplicationDbContext _context;
@@ -74,53 +74,6 @@ namespace Vidly.Controllers
 
         // GET: Movie/Random
 
-        public ActionResult Random()
-        {
-            //return View(movie);
-            //return Content("jugurtha");   
-            //return HttpNotFound();
-            //return new EmptyResult();
-            //return RedirectToAction("index", "home", new { page = "1", SortedBy = "name" });
-            /*
-            var movie = new Movie { name = "Shrak!" };
-            var customers = new List<Customer>
-            {
-                new Customer {name ="customer 1" },
-                new Customer { name ="customer 2"}
-            };
-
-            var viewmodel = new RandomViewModel
-            {
-                Movie = movie,
-                Customers = customers
-            };
-
-            return View(viewmodel);
-        }
-
-        public ActionResult Edit (int id)
-        {
-            return Content("id =" +id);
-        }
-
-        //movies
-        public ActionResult index (int? page, string SortedBy)
-        {
-            if (!page.HasValue)
-                page = 1;
-            if (string.IsNullOrWhiteSpace(SortedBy))
-                SortedBy = "name";
-            return Content(string.Format("page={0},SortedBy={1}",page, SortedBy));
-        }
-
-        //implimente the attribue route
-        [Route("movies/released/{year:regex(2015|2016)}/{month:regex(\\d{2}):range(1,12)}")]
-        public ActionResult byReleasedYear(int year, int month)
-        {
-            return Content(year+"/"+month);
-        }*/
-            return null;
-        }
         //movie
         public ActionResult index()
         {
@@ -130,7 +83,7 @@ namespace Vidly.Controllers
             return View("ReadOnlyList");
         }
 
-
+        [Authorize(Roles = RoleName.CanManageMovies)]
         public ActionResult Edit(int id)
         {
             var movie = _context.Movies.SingleOrDefault(m => m.Id == id);
@@ -144,6 +97,7 @@ namespace Vidly.Controllers
             return View("MovieForm",viewmodel);
         }
 
+        [Authorize(Roles = RoleName.CanManageMovies)]
         public ActionResult Details(int id)
         {
             var movie = _context.Movies.Include(m => m.Genre).SingleOrDefault(m => m.Id == id);

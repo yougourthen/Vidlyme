@@ -106,3 +106,9 @@ C:\Users\Administrateur.HP-PC\Documents\Visual Studio 2015\Projects\Vidlyme\Vidl
 C:\Users\Administrateur.HP-PC\Documents\Visual Studio 2015\Projects\Vidlyme\Vidly\bin\AutoMapper.xml
 C:\Users\Administrateur.HP-PC\documents\visual studio 2015\Projects\Vidlyme\Vidly\obj\Debug\Vidly.Migrations.SeedUsers.resources
 C:\Users\Administrateur.HP-PC\documents\visual studio 2015\Projects\Vidlyme\Vidly\obj\Debug\Vidly.Migrations.AddDrivingLicenceToApplicationUser.resources
+C:\Users\Administrateur.HP-PC\documents\visual studio 2015\Projects\Vidlyme\Vidly\obj\Debug\Vidly.Migrations.AddPhoneNumberToApplicationUser.resources
+C:\Users\Administrateur.HP-PC\documents\visual studio 2015\Projects\Vidlyme\Vidly\bin\Glimpse.Ado.dll
+C:\Users\Administrateur.HP-PC\documents\visual studio 2015\Projects\Vidlyme\Vidly\bin\Glimpse.AspNet.dll
+C:\Users\Administrateur.HP-PC\documents\visual studio 2015\Projects\Vidlyme\Vidly\bin\Glimpse.Core.dll
+C:\Users\Administrateur.HP-PC\documents\visual studio 2015\Projects\Vidlyme\Vidly\bin\Glimpse.EF6.dll
+C:\Users\Administrateur.HP-PC\documents\visual studio 2015\Projects\Vidlyme\Vidly\bin\Glimpse.Mvc5.dll
